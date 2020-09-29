@@ -19,6 +19,10 @@ abstract class Animal
     {
         return yearNamed;
     }
+    public String getName()
+    {
+        return name;
+    }
 
     public void eat(String food)
     {

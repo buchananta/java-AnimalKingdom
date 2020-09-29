@@ -39,10 +39,25 @@ public class Main
         animals.add(salmon);
         animals.add(catfish);
         animals.add(parch);
-        System.out.println(animals);
+        System.out.println("*** List all the animals in descending order by year named ***");
         animals.sort((a1, a2) -> a1.getYearNamed() - a2.getYearNamed());
         // animals.forEach((a) -> System.out.println(a));
         System.out.println(animals);
+
+        System.out.println("*** List all the animals alphabetically ***");
+        animals.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        System.out.println(animals);
+
+        System.out.println("*** List all the animals order by how they move ***");
+        animals.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
+        System.out.println(animals);
+
+        System.out.println("*** List only those animals that breath with lungs and were named in 1758 ***");
+        animals.filter((a) -> a.yearNamed() == 1758 && a.breath() == "Lungs");
+
+
+
+
     }
 
     public static void main(String[] args)
