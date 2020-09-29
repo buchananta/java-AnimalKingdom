@@ -15,6 +15,10 @@ abstract class Animal
        this.yearNamed = yearNamed;
        this.id = maxId++;
     }
+    public int getYearNamed()
+    {
+        return yearNamed;
+    }
 
     public void eat(String food)
     {
@@ -25,4 +29,9 @@ abstract class Animal
     abstract String breath();
     abstract String reproduce();
 
+    @Override
+    public String toString()
+    {
+        return "Animals{id=" + id + ", name=" + name + ", yearNamed=" + yearNamed + "}\n";
+    }
 }

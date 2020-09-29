@@ -1,5 +1,5 @@
 package animals;
-
+import java.util.*;
 public class Main
 {
     public static void collection()
@@ -18,11 +18,37 @@ public class Main
         Bird toucan = new Bird("Toucan", 1758);
         Bird parrot = new Bird("Parrot", 1824);
         Bird swan = new Bird("Swan", 1758);
+
+        Fish salmon = new Fish("Salmon", 1758);
+        Fish catfish = new Fish("Catfish", 1817);
+        Fish parch = new Fish("Perch", 1758);
+        
+        List<Animal> animals = new ArrayList<>();
+        animals.add(panda);
+        animals.add(zebra);
+        animals.add(koala);
+        animals.add(sloth);
+        animals.add(armadillo);
+        animals.add(raccoon);
+        animals.add(bigfoot);
+        animals.add(pigeon);
+        animals.add(peacock);
+        animals.add(toucan);
+        animals.add(parrot);
+        animals.add(swan);
+        animals.add(salmon);
+        animals.add(catfish);
+        animals.add(parch);
+        System.out.println(animals);
+        animals.sort((a1, a2) -> a1.getYearNamed() - a2.getYearNamed());
+        // animals.forEach((a) -> System.out.println(a));
+        System.out.println(animals);
     }
 
     public static void main(String[] args)
     {
         System.out.println("hello world!");
+        collection();
     }
 
 }
